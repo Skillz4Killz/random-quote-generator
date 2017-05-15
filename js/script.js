@@ -3,7 +3,7 @@
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 //create all global variables
-var quote, source, citation, year, tags, rating, fullQuote;
+var quote, source, citation, date, tags, rating, fullQuote;
 var numOfQuotes = quotes.length;
 var usedQuotes = [];
 /*infinite loop to find a random number which if is not already used goes through and assigns the object to variables and pushes the 
@@ -16,7 +16,7 @@ function getRandomQuote () {
             quote = quotes[randomNum].quote;
             source = quotes[randomNum].source;
             citation = quotes[randomNum].citation;
-            year = quotes[randomNum].year;
+            date = quotes[randomNum].date;
             tags = quotes[randomNum].tags;
             rating = quotes[randomNum].rating;
             usedQuotes.push(randomNum);
@@ -25,20 +25,20 @@ function getRandomQuote () {
         } else if (usedQuotes.length === quotes.length) {
             usedQuotes = [];
         } } }
-//print the quote by creating different html codes depending on if a citation and year is present or not.
+//print the quote by creating different html codes depending on if a citation and date is present or not.
 function printQuote () {
     getRandomQuote();
-    if (citation !== "" && year !== "") {
+    if (citation !== "" && date !== "") {
         fullQuote = '<p class="quote">' + quote + '</p><p class="source">' + source + '<span class="citation">' + 
-        citation + '</span><span class="year">' + year + '</span></p><h3 class="source">' + tags + '</h3><h3 class="source">Rated: ' +
-        rating + 'stars</h3>'
+        citation + '</span><span class="year">' + date + '</span></p><h3 class="source">' + tags + '</h3><h3 class="source">Rated: ' +
+        rating + ' stars</h3>'
     } else if (citation !== "") {
-        fullQuote = '<p class="quote">' + quote + '</p><p class="source">' + source + '<span class="year">' + year +
-        '</span></p><h3 class="source">' + tags + '</h3><h3 class="source">Rated: ' + rating + 'stars</h3>'
+        fullQuote = '<p class="quote">' + quote + '</p><p class="source">' + source + '<span class="year">' + date +
+        '</span></p><h3 class="source">' + tags + '</h3><h3 class="source">Rated: ' + rating + ' stars</h3>'
     } else { 
         fullQuote = '<p class="quote">' + quote + '</p><p class="source">' + source + '<span class="citation">' + 
         citation + '</span></p><h3 class="source">' + tags + '</h3><h3 class="source">Rated: ' +
-        rating + 'stars</h3>'
+        rating + ' stars</h3>'
     }
     document.getElementById("quote-box").innerHTML = fullQuote;
     //random color generator
