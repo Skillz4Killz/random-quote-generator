@@ -33,15 +33,14 @@ function printQuote () {
     getRandomQuote();
     if (citation !== "" && date !== "") {
         fullQuote = '<p class="quote">' + quote + '</p><p class="source">' + source + '<span class="citation">' + 
-        citation + '</span><span class="year">' + date + '</span></p><h3 class="source">' + tags + '</h3><h3 class="source">Rated: ' +
-        rating + ' stars</h3>'
+        citation + '</span><span class="year">' + date + '</span></p><p class="source">' + tags + ', Rated: ' +
+        rating + ' stars<p>'
     } else if (citation !== "") {
         fullQuote = '<p class="quote">' + quote + '</p><p class="source">' + source + '<span class="year">' + date +
-        '</span></p><h3 class="source">' + tags + '</h3><h3 class="source">Rated: ' + rating + ' stars</h3>'
+        '</span></p><p class="source">' + tags + ', Rated: ' + rating + ' stars</p>'
     } else { 
         fullQuote = '<p class="quote">' + quote + '</p><p class="source">' + source + '<span class="citation">' + 
-        citation + '</span></p><h3 class="source">' + tags + '</h3><h3 class="source">Rated: ' +
-        rating + ' stars</h3>'
+        citation + '</span></p><p class="source">' + tags + ', Rated: ' + rating + ' stars</p>'
     }
     document.getElementById("quote-box").innerHTML = fullQuote;
     //random color generator

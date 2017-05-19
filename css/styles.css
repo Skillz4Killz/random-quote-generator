@@ -13,14 +13,14 @@ body {
   line-height: .5;
 }
 .quote {
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.1;
   position: relative;
   margin: 0;
   } 
 .quote:before, .quote:after {
-  font-size: 6rem;
+  font-size: 4rem;
   line-height: 2.5rem;
   position: absolute;
 }
@@ -77,92 +77,15 @@ body {
 #loadQuote:focus {
   outline: none;
 }
-
+/* Made some changes to size to make it responsive on all devices for large quotes */
 @media (max-width: 420px) {
   .quote {
-    font-size: 2.5rem;
+    font-size: 1.3rem;
   }
   .quote:before, .quote:after {
     font-size: 3rem;
   }
   .source {
     font-size: 1rem;
-  }
-}
-
-/******** Improving Responsiveness on multiple devices ********/
-
-@media (max-width: 1920px) {
-  .quote {
-    font-size: 2.5rem;
-  }
-  .quote:before, .quote:after {
-    font-size: 3rem;
-  }
-  .source {
-    font-size: 2.5rem;
-  }
-  #loadQuote {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 1366px) {
-  .quote {
-    font-size: 3.7rem;
-  }
-  .quote:before, .quote:after {
-    font-size: 3rem;
-  }
-  .source {
-    font-size: 2rem;
-  }
-   #loadQuote {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .quote {
-    font-size: 2.5rem;
-  }
-  .quote:before, .quote:after {
-    font-size: 1.5rem;
-  }
-  .source {
-    font-size: 1.2rem;
-  }
-   #loadQuote {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .quote {
-    font-size: 2.0rem;
-  }
-  .quote:before, .quote:after {
-    font-size: 1.5rem;
-  }
-  .source {
-    font-size: 1.2rem;
-  }
-   #loadQuote {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 736px) {
-  .quote {
-    font-size: 1.5rem;
-  }
-  .quote:before, .quote:after {
-    font-size: 1.5rem;
-  }
-  .source {
-    font-size: .9rem;
-  }
-   #loadQuote {
-    font-size: .9rem;
   }
 }
