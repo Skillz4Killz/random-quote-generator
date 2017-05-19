@@ -49,5 +49,5 @@ function printQuote () {
     document.getElementById("loadQuote").style.backgroundColor = randomColor;
 }
 
-//random quote after every 30 seconds. This takes into account Unique quotes also.
-setInterval(printQuote, 30000);
+//random quote after every 15 seconds. This takes into account Unique quotes also.
+setInterval(printQuote, 15000);
